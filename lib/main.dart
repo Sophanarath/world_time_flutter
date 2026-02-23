@@ -4,7 +4,12 @@ import 'pages/loading.dart';
 import 'pages/location.dart';
 
 void main() {
-  runApp(const MaterialApp(
-    home: Home(),
+  runApp(MaterialApp(
+    initialRoute: '/home',
+    routes: {
+      '/home': (context) => const Home(),
+      '/location': (context) => const Location(),
+      '/': (context) => const Loading(),
+    }
   ));
 }
